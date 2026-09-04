@@ -92,10 +92,11 @@ img {
 }
 
 .brand-logo {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   border: 3px solid rgba(10, 122, 184, 0.14);
   box-shadow: 0 10px 24px rgba(10, 122, 184, 0.18);
 }
