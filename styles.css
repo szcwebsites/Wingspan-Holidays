@@ -339,6 +339,9 @@ button:hover {
 
 .trust-marquee {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px;
   width: max-content;
   animation: trust-scroll 24s linear infinite;
 }
@@ -351,7 +354,8 @@ button:hover {
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  flex: 0 0 min(1120px, calc(100vw - 32px));
+  flex: 0 0 auto;
+  width: min(1120px, calc(100vw - 32px));
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -366,10 +370,6 @@ button:hover {
 
 .trust-grid div:last-child {
   border-right: 0;
-}
-
-.trust-grid + .trust-grid {
-  margin-left: 24px;
 }
 
 .trust-grid strong {
@@ -388,7 +388,7 @@ button:hover {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-1 * min(1120px, calc(100vw - 32px)) - 24px));
+    transform: translateX(calc(-1 * (min(1120px, calc(100vw - 32px)) + 24px)));
   }
 }
 
